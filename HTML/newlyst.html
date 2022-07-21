@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../Style/newlyst.css">
+    <script src='../Script/newlyst.js'></script>
+</head>
+
+<body>
+    <div id="create">
+        <div id="cont">
+
+            <div>
+                <button id="click">NEW To LYST ?</button>
+                <button id="click1">ALREADY MEMBER</button>
+            </div>
+            <div>
+                <h3>Search Thousand of fashion<br> brands and store all in one place<h3>
+            </div>
+            <div>
+                <p>We just need a few details from your first</p>
+            </div>
+
+            <div>
+                <form action="">
+                    <label for="">Email Address</label>
+                    <input type="text" id="email" placeholder="Enter Your Email Address">
+                    <label for="">Password</label>
+                    <input type="text" id="password" placeholder="min 8 characters">
+                    <label for="">I would to hear about Products Services and sales,includes personalized email alert
+                        from Lyst you can unsubscribe at any time</label>
+                    <input type="submit" value="Join Lyst">
+                </form>
+            </div>
+
+            <div>
+                <label for="">or</label>
+            </div>
+
+            <div id="facebook">
+                <button>Continue With facebook</button>
+                <button>Continue With Google</button>
+                <button>Continue With Apple</button>
+            </div>
+
+            <div>
+                <p>
+                    By creating an account, you consent to Lyst’s Terms & Conditions. To learn more about how Lyst uses
+                    and protects your personal data, please read Lyst’s Privacy Policy.
+                </p>
+            </div>
+
+        </div>
+
+
+
+        <div id="create1">
+
+            <div>
+                <h3>As a Lyst Member You can</h3>
+                <ul>
+                    <li>save your Searches</li>
+                    <li>Create a Wishlist</li>
+                    <li>Get Alert on your items</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    let form = document.querySelector("form");
+    let signupLS = JSON.parse(localStorage.getItem("signup")) || [];
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        let obj = {
+            email: form.email.value,
+            password: form.password.value,
+        }
+
+        if (obj.email == "" || obj.password == "") {
+            alert("field empty")
+            return;
+        }
+        else {
+            signupLS.push(obj);
+            localStorage.setItem("signup", JSON.stringify(signupLS))
+        }
+
+    })
+
+    document.getElementById("click").addEventListener("click",function(){
+        let btn1= document.getElementById("click");
+        btn1.style.backgroundColor = "black";
+        btn1.style.color = "white";
+        
+   
+       
+    })
+
+    document.getElementById("click1").addEventListener("click",function(){
+        let btn1= document.getElementById("click1");
+        btn1.style.backgroundColor = "black";
+        btn1.style.color = "white";
+        
+
+    })
+</script>

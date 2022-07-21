@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../Style/alreadymember.css">
+    <!-- <script src='../Script/alreadymember.js'></script> -->
+</head>
+
+<body>
+    <div id="create">
+        <div id="cont">
+          <div>
+            <button>NEW To LYST ?</button>
+            <button>ALREADY MEMBER</button>
+        </div>
+                  <h3>SIGN IN</h3>
+             <div>
+                <form action="">
+                    <label for="">Email Address</label>
+                    <input type="text" id="email" placeholder="Enter Your Email Address">
+                    <label for="">Password</label>
+                    <input type="text" id="password" placeholder="min 8 characters">
+                    <label for="">I would to hear about Products Services and sales,includes personalized email alert
+                        from Lyst you can unsubscribe at any time</label>
+                    <input type="submit" value="Sign in">
+                </form>
+            </div>
+
+            <div>
+                <label for="">or</label>
+            </div>
+
+            <div id="facebook">
+                <button>Continue With facebook</button>
+                <button>Continue With Google</button>
+                <button>Continue With Apple</button>
+            </div>
+
+        </div>
+
+        
+            <!-- <p>
+                By creating an account, you consent to Lyst’s Terms & Conditions. To learn more about how Lyst uses and protects your personal data, please read Lyst’s Privacy Policy.
+            </p>
+        -->
+
+
+        <div id="create1">
+
+            <div>
+                <h3>As a Lyst Member You can</h3>
+                <ul>
+                    <li>save your Searches</li>
+                    <li>Create a Wishlist</li>
+                    <li>Get Alert on your items</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+<script>
+  
+  let form = document.querySelector("form");
+    let signupLS = JSON.parse(localStorage.getItem("signup")) || [];
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (signupLS.length === 0) {
+            alert("No user till Now")
+            return;
+        }
+        let obj = {
+            email: form.email.value,
+            password: form.password.value,
+        }
+        let isSignedin = false;
+        signupLS.forEach(function (ele) {
+            if (ele.email === obj.email && ele.password === obj.password) {
+                isSignedin = true;
+                localStorage.setItem("signin", JSON.stringify(ele));
+                alert("Sign up Successful")
+                window.location.href = "navbar.html"
+            }
+        })
+
+        if (isSignedin == false) {
+            alert("User Doesnot Exist")
+        }
+
+    })
+
+</script>
