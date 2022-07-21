@@ -7,7 +7,7 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="../Style/newlyst.css">
-    <script src='../Script/newlyst.js'></script>
+   
 </head>
 
 <body>
@@ -75,44 +75,4 @@
 
 </html>
 
-
-<script>
-    let form = document.querySelector("form");
-    let signupLS = JSON.parse(localStorage.getItem("signup")) || [];
-
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        let obj = {
-            email: form.email.value,
-            password: form.password.value,
-        }
-
-        if (obj.email == "" || obj.password == "") {
-            alert("field empty")
-            return;
-        }
-        else {
-            signupLS.push(obj);
-            localStorage.setItem("signup", JSON.stringify(signupLS))
-        }
-
-    })
-
-    document.getElementById("click").addEventListener("click",function(){
-        let btn1= document.getElementById("click");
-        btn1.style.backgroundColor = "black";
-        btn1.style.color = "white";
-        
-   
-       
-    })
-
-    document.getElementById("click1").addEventListener("click",function(){
-        let btn1= document.getElementById("click1");
-        btn1.style.backgroundColor = "black";
-        btn1.style.color = "white";
-        
-
-    })
-</script>
+<script src='../Script/newlyst.js'></script>
