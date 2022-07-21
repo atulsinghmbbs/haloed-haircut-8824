@@ -12,6 +12,14 @@ gap:30px
     display: none;
     z-index: 2;
 }
+/* #popdown1{
+    border: 1px solid red;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: none;
+    z-index: 2;
+} */
 
 #nav>p:nth-child(4){
     width:5%;
@@ -20,22 +28,32 @@ gap:30px
 }
 
 #top{
-    width:100%;
-    display:flex;
-    
+    width:90%;
+    display: grid;
+    grid-template-columns:10% 20% 80% ;
+    /* border:2px solid red; */
      
 }
- 
 #top>div{
-  display:flex;
+display:flex;  
+  justify-content:space-around;
   align-items: center;
-  justify-content:center;
+  /* border:2px solid green; */
+}
 
+#top1{
+    font-weight:900;
 }
-#top input{
+
+#top>div:nth-child(3)>input{
+    width:100%;
+    height:40px;
+    padding:6px ;
+}
+/* #top input{
 width:400%;
-height:50px;
-}
+
+} */
 
 
 .firstpic>img{

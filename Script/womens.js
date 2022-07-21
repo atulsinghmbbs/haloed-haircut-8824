@@ -143,16 +143,16 @@ function Display(data) {
     let img = document.createElement("img");
     img.src = ele.img;
 
-    let name1 = document.createElement("h1");
+    let name1 = document.createElement("p");
     name1.textContent = ele.name;
 
-    let desc = document.createElement("h2");
+    let desc = document.createElement("p");
     desc.textContent = ele.desc;
 
-    let price = document.createElement("h2");
+    let price = document.createElement("p");
     price.textContent = ele.price;
 
-    let logo = document.createElement("h2");
+    let logo = document.createElement("p");
     logo.textContent = ele.logo;
 
     let btn = document.createElement("button");
