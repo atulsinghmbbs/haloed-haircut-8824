@@ -17,7 +17,7 @@ form.addEventListener("submit",function(event) {
         signupLS.push(obj);
         localStorage.setItem("signup", JSON.stringify(signupLS))
         alert("sign up successful")
-        window.Location.href="Alreadymember.html"
+       window.location.href="Alreadymember.html"
     }
  
 })
