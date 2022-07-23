@@ -15,11 +15,10 @@
         let isSignedin = false;
         signupLS.forEach(function (ele) {
             if (ele.email === obj.email && ele.password === obj.password) {
-                isSignedin = true;
-                localStorage.setItem("signin", JSON.stringify(ele));
-                 window.location.href = "navbar.html"
                 alert("Sign up Successful")
-               
+                window.location.href = "Homepage.html"
+                localStorage.setItem("signin", JSON.stringify(ele));
+                isSignedin = true;
             }
         })
 
