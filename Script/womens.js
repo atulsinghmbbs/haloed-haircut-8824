@@ -155,13 +155,13 @@ function Display(data) {
     let logo = document.createElement("p");
     logo.textContent = ele.logo;
 
-    let btn = document.createElement("button");
-    btn.innerText = "Add to cart";
-    btn.addEventListener("click", function () {
-      AddtoCart(ele);
-    });
+    // let btn = document.createElement("button");
+    // btn.innerText = "Add to cart";
+    // btn.addEventListener("click", function () {
+    //   AddtoCart(ele);
+    // });
 
-    product.append(img, name1, desc, price, logo,btn);
+    product.append(img, name1, desc, price, logo);
     cont.append(product);
   });
 }
